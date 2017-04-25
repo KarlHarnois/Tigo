@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		CBD036B11EAFF7E7003A5943 /* Tigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD036A71EAFF7E7003A5943 /* Tigo.framework */; };
 		CBD036B81EAFF7E7003A5943 /* Tigo.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD036AA1EAFF7E7003A5943 /* Tigo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBD036C41EAFF938003A5943 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036C31EAFF938003A5943 /* Signal.swift */; };
+		CBD036C61EAFF972003A5943 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036C51EAFF972003A5943 /* Observable.swift */; };
+		CBD036C81EAFF988003A5943 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036C71EAFF988003A5943 /* Wrapper.swift */; };
+		CBD036CB1EAFF9B6003A5943 /* MappingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036CA1EAFF9B6003A5943 /* MappingWrapper.swift */; };
+		CBD036CD1EAFF9BE003A5943 /* ConditionalWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036CC1EAFF9BE003A5943 /* ConditionalWrapper.swift */; };
+		CBD036D31EAFFA23003A5943 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036D21EAFFA23003A5943 /* Operators.swift */; };
+		CBD036D51EAFFA34003A5943 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036D41EAFFA34003A5943 /* Observer.swift */; };
+		CBD036D81EAFFA5E003A5943 /* UILabel+Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036D71EAFFA5E003A5943 /* UILabel+Bindings.swift */; };
+		CBD036DD1EAFFAE6003A5943 /* SignalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036DC1EAFFAE6003A5943 /* SignalTests.swift */; };
+		CBD036E01EB009FB003A5943 /* ObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036DF1EB009FB003A5943 /* ObserverTests.swift */; };
+		CBD036E21EB00B63003A5943 /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036E11EB00B63003A5943 /* OperatorsTests.swift */; };
+		CBD036E71EB00E90003A5943 /* UILabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036E61EB00E90003A5943 /* UILabelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +39,18 @@
 		CBD036AB1EAFF7E7003A5943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD036B01EAFF7E7003A5943 /* TigoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TigoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD036B71EAFF7E7003A5943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBD036C31EAFF938003A5943 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		CBD036C51EAFF972003A5943 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		CBD036C71EAFF988003A5943 /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
+		CBD036CA1EAFF9B6003A5943 /* MappingWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingWrapper.swift; sourceTree = "<group>"; };
+		CBD036CC1EAFF9BE003A5943 /* ConditionalWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionalWrapper.swift; sourceTree = "<group>"; };
+		CBD036D21EAFFA23003A5943 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		CBD036D41EAFFA34003A5943 /* Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		CBD036D71EAFFA5E003A5943 /* UILabel+Bindings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Bindings.swift"; sourceTree = "<group>"; };
+		CBD036DC1EAFFAE6003A5943 /* SignalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalTests.swift; sourceTree = "<group>"; };
+		CBD036DF1EB009FB003A5943 /* ObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverTests.swift; sourceTree = "<group>"; };
+		CBD036E11EB00B63003A5943 /* OperatorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
+		CBD036E61EB00E90003A5943 /* UILabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +93,12 @@
 		CBD036A91EAFF7E7003A5943 /* Tigo */ = {
 			isa = PBXGroup;
 			children = (
-				CBD036AA1EAFF7E7003A5943 /* Tigo.h */,
-				CBD036AB1EAFF7E7003A5943 /* Info.plist */,
+				CBD036D21EAFFA23003A5943 /* Operators.swift */,
+				CBD036D41EAFFA34003A5943 /* Observer.swift */,
+				CBD036DB1EAFFA95003A5943 /* Observables */,
+				CBD036D61EAFFA48003A5943 /* CocoaTouch Bindings */,
+				CBD036C91EAFF98D003A5943 /* Wrappers */,
+				CBD036C11EAFF90C003A5943 /* Supporting Files */,
 			);
 			path = Tigo;
 			sourceTree = "<group>";
@@ -78,9 +106,73 @@
 		CBD036B41EAFF7E7003A5943 /* TigoTests */ = {
 			isa = PBXGroup;
 			children = (
-				CBD036B71EAFF7E7003A5943 /* Info.plist */,
+				CBD036DF1EB009FB003A5943 /* ObserverTests.swift */,
+				CBD036E11EB00B63003A5943 /* OperatorsTests.swift */,
+				CBD036DE1EAFFAEF003A5943 /* Observables */,
+				CBD036E51EB00E7E003A5943 /* CocoaTouch Bindings */,
+				CBD036C21EAFF913003A5943 /* Supporting Files */,
 			);
 			path = TigoTests;
+			sourceTree = "<group>";
+		};
+		CBD036C11EAFF90C003A5943 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBD036AA1EAFF7E7003A5943 /* Tigo.h */,
+				CBD036AB1EAFF7E7003A5943 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBD036C21EAFF913003A5943 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBD036B71EAFF7E7003A5943 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBD036C91EAFF98D003A5943 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				CBD036C71EAFF988003A5943 /* Wrapper.swift */,
+				CBD036CA1EAFF9B6003A5943 /* MappingWrapper.swift */,
+				CBD036CC1EAFF9BE003A5943 /* ConditionalWrapper.swift */,
+			);
+			name = Wrappers;
+			sourceTree = "<group>";
+		};
+		CBD036D61EAFFA48003A5943 /* CocoaTouch Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				CBD036D71EAFFA5E003A5943 /* UILabel+Bindings.swift */,
+			);
+			name = "CocoaTouch Bindings";
+			sourceTree = "<group>";
+		};
+		CBD036DB1EAFFA95003A5943 /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				CBD036C51EAFF972003A5943 /* Observable.swift */,
+				CBD036C31EAFF938003A5943 /* Signal.swift */,
+			);
+			name = Observables;
+			sourceTree = "<group>";
+		};
+		CBD036DE1EAFFAEF003A5943 /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				CBD036DC1EAFFAE6003A5943 /* SignalTests.swift */,
+			);
+			name = Observables;
+			sourceTree = "<group>";
+		};
+		CBD036E51EB00E7E003A5943 /* CocoaTouch Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				CBD036E61EB00E90003A5943 /* UILabelTests.swift */,
+			);
+			name = "CocoaTouch Bindings";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,10 +236,12 @@
 				TargetAttributes = {
 					CBD036A61EAFF7E6003A5943 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					CBD036AF1EAFF7E7003A5943 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -192,6 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD036D51EAFFA34003A5943 /* Observer.swift in Sources */,
+				CBD036D81EAFFA5E003A5943 /* UILabel+Bindings.swift in Sources */,
+				CBD036D31EAFFA23003A5943 /* Operators.swift in Sources */,
+				CBD036CB1EAFF9B6003A5943 /* MappingWrapper.swift in Sources */,
+				CBD036C81EAFF988003A5943 /* Wrapper.swift in Sources */,
+				CBD036CD1EAFF9BE003A5943 /* ConditionalWrapper.swift in Sources */,
+				CBD036C61EAFF972003A5943 /* Observable.swift in Sources */,
+				CBD036C41EAFF938003A5943 /* Signal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD036DD1EAFFAE6003A5943 /* SignalTests.swift in Sources */,
+				CBD036E01EB009FB003A5943 /* ObserverTests.swift in Sources */,
+				CBD036E71EB00E90003A5943 /* UILabelTests.swift in Sources */,
+				CBD036E21EB00B63003A5943 /* OperatorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +421,7 @@
 		CBD036BC1EAFF7E7003A5943 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -326,6 +433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tigo.Tigo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -333,6 +441,7 @@
 		CBD036BD1EAFF7E7003A5943 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -351,10 +460,13 @@
 		CBD036BF1EAFF7E7003A5943 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TigoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tigo.TigoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -362,6 +474,8 @@
 		CBD036C01EAFF7E7003A5943 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TigoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tigo.TigoTests;
