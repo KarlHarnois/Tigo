@@ -49,6 +49,14 @@ public final class Signal<T>: Observable {
     observers.append(observer)
   }
 
+  public func bind(to signal: Signal<T>) {
+    let ob = Observer<T> { [weak signal] value in
+      signal?.send(value)
+    }
+
+    observers.append(ob)
+  }
+
   public func onNext(_ callback: @escaping (T) -> Void) {
     let ob = Observer(callback)
 

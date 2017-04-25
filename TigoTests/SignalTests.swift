@@ -10,7 +10,7 @@ final class SignalTests: XCTestCase {
 
   // MARK: - Tests
 
-  func test_simple_sequence_of_value() {
+  func test_bind_to_observer() {
     var received: [Int] = []
 
     let observer = Observer<Int> { value in
@@ -26,6 +26,20 @@ final class SignalTests: XCTestCase {
     XCTAssertEqual(received, [1, 2, 3])
   }
 
+  func test_bind_to_signal() {
+    var received: [Int] = []
+
+    let other = Signal<Int>()
+    other.onNext { received.append($0) }
+
+    signal.bind(to: other)
+
+    signal.send(50)
+    signal.send(100)
+    signal.send(150)
+
+    XCTAssertEqual(received, [50, 100, 150])
+  }
 
   func test_more_than_one_observers() {
     var receivedByA: [Int] = []
