@@ -69,8 +69,7 @@
 		CBD036A91EAFF7E7003A5943 /* Tigo */ = {
 			isa = PBXGroup;
 			children = (
-				CBD036AA1EAFF7E7003A5943 /* Tigo.h */,
-				CBD036AB1EAFF7E7003A5943 /* Info.plist */,
+				CBD036C11EAFF90C003A5943 /* Supporting Files */,
 			);
 			path = Tigo;
 			sourceTree = "<group>";
@@ -78,9 +77,26 @@
 		CBD036B41EAFF7E7003A5943 /* TigoTests */ = {
 			isa = PBXGroup;
 			children = (
-				CBD036B71EAFF7E7003A5943 /* Info.plist */,
+				CBD036C21EAFF913003A5943 /* Supporting Files */,
 			);
 			path = TigoTests;
+			sourceTree = "<group>";
+		};
+		CBD036C11EAFF90C003A5943 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBD036AA1EAFF7E7003A5943 /* Tigo.h */,
+				CBD036AB1EAFF7E7003A5943 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBD036C21EAFF913003A5943 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBD036B71EAFF7E7003A5943 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
