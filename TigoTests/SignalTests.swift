@@ -179,7 +179,7 @@ final class SignalTests: XCTestCase {
     XCTAssertEqual(received, ["6 foo", "8 foo"])
   }
 
-  func multiple_observers_maps_and_filters() {
+  func test_multiple_observers_maps_and_filters() {
     var receivedByA: [Int] = []
     var receivedByB: [String] = []
 
