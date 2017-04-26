@@ -239,4 +239,23 @@ final class SignalTests: XCTestCase {
     XCTAssertEqual(receivedByA, [30, 40])
     XCTAssertEqual(receivedByB, ["5foo", "7foo"])
   }
+
+  // MARK: - Other Desired Behaviors Tests
+
+  func test_assignment_created_in_a_temporary_scope_persist() {
+    var received: [Int] = []
+    let number = Signal(10)
+
+    _ = {
+      let doubled = number.map { $0 * 2 }
+
+      doubled.onNext { received.append($0) }
+    }()
+
+    number.send(10)
+    number.send(20)
+    number.send(30)
+
+    XCTAssertEqual(received, [20, 40, 60])
+  }
 }
