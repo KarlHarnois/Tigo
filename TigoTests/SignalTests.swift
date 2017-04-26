@@ -8,7 +8,7 @@ final class SignalTests: XCTestCase {
     signal = Signal<Int>()
   }
 
-  // MARK: - Tests
+  // MARK: - Binding Tests
 
   func test_bind_to_observer() {
     var received: [Int] = []
@@ -63,7 +63,7 @@ final class SignalTests: XCTestCase {
     XCTAssertEqual(receivedByC, [10, 100, 1000])
   }
 
-  func test_onNext() {
+  func test_onNext_sends_data() {
     var received: [Int] = []
 
     signal.onNext { received.append($0) }
@@ -74,6 +74,38 @@ final class SignalTests: XCTestCase {
 
     XCTAssertEqual(received, [9, 10, 11])
   }
+
+  func test_signal_pass_last_value_when_bound_to_observer() {
+    var received: Int?
+    let signal = Signal(10)
+    let ob = Observer<Int> { received = $0 }
+
+    ob <- signal
+
+    XCTAssertEqual(received, 10)
+  }
+
+  func test_signal_pass_last_value_when_bound_to_signal() {
+    var received: String?
+    let a = Signal("tigo")
+    let b = Signal<String>()
+
+    b.onNext { received = $0 }
+    a.bind(to: b)
+
+    XCTAssertEqual(received, "tigo")
+  }
+
+  func test_signal_pass_last_value_when_calling_onNext() {
+    var received: Bool?
+    let signal = Signal(false)
+
+    signal.onNext { received = $0 }
+
+    XCTAssertEqual(received, false)
+  }
+
+  // MARK: - map Operator Tests
 
   func test_map() {
     var received: [String] = []
@@ -127,6 +159,8 @@ final class SignalTests: XCTestCase {
     XCTAssertEqual(receivedByA, ["11", "21", "31"])
     XCTAssertEqual(receivedByB, [20, 30, 40])
   }
+
+  // MARK: - filter Operator Tests
 
   func test_filter() {
     var received: [Int] = []
@@ -204,5 +238,24 @@ final class SignalTests: XCTestCase {
 
     XCTAssertEqual(receivedByA, [30, 40])
     XCTAssertEqual(receivedByB, ["5foo", "7foo"])
+  }
+
+  // MARK: - Other Desired Behaviors Tests
+
+  func test_assignment_created_in_a_temporary_scope_persist() {
+    var received: [Int] = []
+    let number = Signal(10)
+
+    _ = {
+      let doubled = number.map { $0 * 2 }
+
+      doubled.onNext { received.append($0) }
+    }()
+
+    number.send(10)
+    number.send(20)
+    number.send(30)
+
+    XCTAssertEqual(received, [20, 40, 60])
   }
 }

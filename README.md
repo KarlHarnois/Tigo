@@ -6,7 +6,7 @@ Tigo has 2 kind of observables:
 
 `Signal`: Value over time, "Hot" observable, typically properties and UI bindings.
 
-`Promises`: Future value fired once, "Cold" observable, typically network call.
+`Promise`: Future value fired once, "Cold" observable, typically network call.
 
 ## Examples
 ### Basic Signal
@@ -46,9 +46,10 @@ let someObserver = Observer<String> { value in
   print(value)
 }
 
-someObserver <- dog
-  .filter{ $0.isCute }
-  .map{ "\($0.name) is a cute dog" }
+dog
+  .filter { $0.isCute }
+  .map { "\($0.name) is a cute dog" }
+  .bind(to: someObserver)
 
 let tigo = Dog(name: "Tigo", isCute: true)
 let ruffus = Dog(name: "Ruffus", isCute: false)
@@ -81,3 +82,6 @@ user.send(karl) // the username signal will receive "Karl"
 ## ToDo List
 1. `Promise` type for "cold" observable
 2. `KVO signal`
+3. Use `Quick/Nimble` for testing
+4. Carthage
+5. Cocoapods
