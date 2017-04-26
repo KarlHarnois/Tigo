@@ -81,3 +81,6 @@ user.send(karl) // the username signal will receive "Karl"
 ## ToDo List
 1. `Promise` type for "cold" observable
 2. `KVO signal`
+3. Use `Quick/Nimble` for testing
+4. Carthage
+5. Cocoapods
