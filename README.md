@@ -46,7 +46,9 @@ let someObserver = Observer<String> { value in
   print(value)
 }
 
-someObserver <- dog.filter{ $0.isCute }.map{ $0 + " is a cute dog" }
+someObserver <- dog
+  .filter{ $0.isCute }
+  .map{ "\($0.name) is a cute dog" }
 
 let tigo = Dog(name: "Tigo", isCute: true)
 let ruffus = Dog(name: "Ruffus", isCute: false)
