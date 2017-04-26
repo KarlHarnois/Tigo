@@ -65,6 +65,18 @@ label.tigo.text <- name
 
 name.send("Tigo") // label.text is now "Tigo"
 ```
+### Composition
+You can also bind signals together easily!
+```swift
+let user = Signal<User>()
+let username = Signal<String>()
+
+username <- user.map { $0.name }
+
+let karl = User(name: "Karl")
+
+user.send(karl) // the username signal will receive "Karl"
+```
 
 ## ToDo List
 1. `Promise` type for "cold" observable
