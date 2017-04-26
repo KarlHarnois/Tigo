@@ -4,6 +4,8 @@ public final class Signal<T>: Observable {
   internal var observers: [Observer<T>] = []
   internal var children: [AnyWrapper] = []
 
+  // MARK: - Value
+
   private var stream: [T] = [] {
     didSet {
       guard let value = stream.last else { return }
@@ -16,6 +18,10 @@ public final class Signal<T>: Observable {
   // MARK: - Init
 
   public init() {}
+
+  public init(_ initialValue: T) {
+    stream.append(initialValue)
+  }
 
   // MARK: - Operators
 
@@ -45,21 +51,45 @@ public final class Signal<T>: Observable {
     stream.append(value)
   }
 
+  /**
+   The signal sends it's last received value to the observer instantly (if any). Then
+   it sends new value every time it receives one.
+   */
   public func bind(to observer: Observer<T>) {
-    observers.append(observer)
+    subscribe(observer)
   }
 
+  /**
+   The bound signal sends it's last received value instantly (if any) then every time
+   it receives a new value.
+   */
   public func bind(to signal: Signal<T>) {
     let ob = Observer<T> { [weak signal] value in
       signal?.send(value)
     }
 
-    observers.append(ob)
+    subscribe(ob)
   }
 
+  /**
+   The signal will call the callback with its last received value if any.
+   Then the callback is called again with every new value sent to the signal.
+   */
   public func onNext(_ callback: @escaping (T) -> Void) {
     let ob = Observer(callback)
 
-    observers.append(ob)
+    subscribe(ob)
+  }
+
+  // MARK: - Helpers
+
+  /**
+   Append the passed observer to the signal's contained observers then pass the
+   last received value (if any) to the new observer.
+   */
+  private func subscribe(_ observer: Observer<T>) {
+    observers.append(observer)
+
+    if let value = stream.last { observer.send(value) }
   }
 }
