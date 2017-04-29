@@ -105,6 +105,21 @@ final class SignalTests: XCTestCase {
     XCTAssertEqual(received, false)
   }
 
+  // MARK: - Apply Binding Test
+
+  func test_apply() {
+    let signal = Signal(1)
+    let increment: (Int) -> Int = { $0 + 1 }
+
+    var received: [String] = []
+
+    signal.map(String.init).onNext { received.append($0) }
+
+    signal.apply(increment)
+
+    XCTAssertEqual(received, ["1", "2"])
+  }
+
   // MARK: - map Operator Tests
 
   func test_map() {
