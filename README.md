@@ -1,3 +1,5 @@
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 # Tigo
 Tigo is a small opinionated library heavily inspired from RxSwift and ReactiveCocoa.
 
@@ -76,7 +78,18 @@ let karl = User(name: "Karl")
 
 user.send(karl) // the username signal will receive "Karl"
 ```
+## Installation
+### [Carthage](https://github.com/Carthage/Carthage)
 
+Add this to `Cartfile`
+
+```
+github "KarlHarnois/Tigo" ~> 0.1
+```
+
+```bash
+$ carthage update
+```
 ## ToDo List
 1. `Promise` type for "cold" observable
 2. `KVO signal`
