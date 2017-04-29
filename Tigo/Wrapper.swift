@@ -5,16 +5,16 @@ protocol AnyWrapper {
 }
 
 protocol Wrapper {
-  associatedtype A
-  associatedtype B
+  associatedtype Output
+  associatedtype Input
 
-  var wrapped: Signal<B>? { get set }
-  func send(_ value: A)
+  var wrapped: Signal<Output>? { get set }
+  func send(_ value: Input)
 }
 
 extension Wrapper {
   func send(_ value: Any) {
-    guard let value = value as? A else { return }
+    guard let value = value as? Input else { return }
 
     send(value)
   }
