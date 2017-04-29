@@ -71,6 +71,17 @@ public final class Signal<T>: Observable {
   }
 
   /**
+   Apply a pure function on the signal's last value then emit the result.
+   */
+  public func apply(_ f: (T) -> T) {
+    guard let lastValue = last else { return }
+
+    let newValue = f(lastValue)
+
+    send(newValue)
+  }
+
+  /**
    The signal sends it's last received value to the observer instantly (if any). Then
    it sends new value every time it receives one.
    */
