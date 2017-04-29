@@ -15,7 +15,7 @@ final class UILabelTests: XCTestCase {
   func test_text() {
     let cuteDogName = Signal<String>()
 
-    label.tigo.text <- cuteDogName
+    label.reactive.text <- cuteDogName
 
     cuteDogName.send("Tigo")
 
@@ -32,7 +32,7 @@ final class UILabelTests: XCTestCase {
 
     weak var label = retainCycleTester?.label
 
-    retainCycleTester!.label.tigo.text <- signal
+    retainCycleTester!.label.reactive.text <- signal
 
     removeReferenceToContainer()
 
@@ -47,7 +47,7 @@ final class UILabelTests: XCTestCase {
   func test_isHidden() {
     let tigoIsHidden = Signal<Bool>()
 
-    label.tigo.isHidden <- tigoIsHidden
+    label.reactive.isHidden <- tigoIsHidden
 
     tigoIsHidden.send(true)
     XCTAssertTrue(label.isHidden)
@@ -66,7 +66,7 @@ final class UILabelTests: XCTestCase {
 
     weak var label = retainCycleTester?.label
 
-    retainCycleTester!.label.tigo.isHidden <- signal
+    retainCycleTester!.label.reactive.isHidden <- signal
 
     removeReferenceToContainer()
 

@@ -1,5 +1,5 @@
 # Tigo
-Small &amp; simple reactive library
+Tigo is a small opinionated library heavily inspired from RxSwift and ReactiveCocoa.
 
 ## Observables
 Tigo has 2 kind of observables:
@@ -21,10 +21,8 @@ number.send(5) // print(5)
 ```
 ### Basic Observer
 ```swift
-let number = Signal<Int>()
-
-let observer = Observer<Int> { number in
-  print(number)
+let observer = Observer<Int> { value in
+  print(value)
 }
 
 number.bind(to: observer)
@@ -62,7 +60,7 @@ dog.send(tigo) // print("Tigo is a cute dog")
 let name = Signal<String>()
 let label = UILabel()
 
-label.tigo.text <- name
+label.reactive.text <- name
 
 name.send("Tigo") // label.text is now "Tigo"
 ```
