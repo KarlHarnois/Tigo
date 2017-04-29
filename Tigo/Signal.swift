@@ -6,6 +6,10 @@ public final class Signal<T>: Observable {
 
   // MARK: - Value
 
+  var last: T? {
+    return stream.last
+  }
+
   private var stream: [T] = [] {
     didSet {
       guard let value = stream.last else { return }
@@ -30,7 +34,7 @@ public final class Signal<T>: Observable {
 
     var wrapper = MappingWrapper(mapping: f)
     wrapper.wrapped = new
-    children.append(wrapper)
+    subscribe(wrapper)
 
     return new
   }
@@ -40,7 +44,22 @@ public final class Signal<T>: Observable {
 
     var wrapper = ConditionalWrapper(condition: f)
     wrapper.wrapped = new
-    children.append(wrapper)
+    subscribe(wrapper)
+
+    return new
+  }
+
+  public func combined<A>(with other: Signal<A>) -> Signal<(T, A)> {
+    let new = Signal<(T, A)>()
+
+    let wrapper = CombiningWrapper(self, other)
+    wrapper.wrapped = new
+
+    other.onNext { [weak wrapper] value in
+      wrapper?._send(value)
+    }
+
+    subscribe(wrapper)
 
     return new
   }
@@ -90,6 +109,12 @@ public final class Signal<T>: Observable {
   private func subscribe(_ observer: Observer<T>) {
     observers.append(observer)
 
-    if let value = stream.last { observer.send(value) }
+    if let value = last { observer.send(value) }
+  }
+
+  private func subscribe(_ wrapper: AnyWrapper) {
+    children.append(wrapper)
+
+    if let value = last { wrapper.send(value) }
   }
 }
