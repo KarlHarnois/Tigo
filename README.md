@@ -94,5 +94,4 @@ $ carthage update
 1. `Promise` type for "cold" observable
 2. `KVO signal`
 3. Use `Quick/Nimble` for testing
-4. Carthage
-5. Cocoapods
+4. Cocoapods
