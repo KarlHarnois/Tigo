@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CB0436801EB0572A0040EAD4 /* CombiningWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB04367F1EB0572A0040EAD4 /* CombiningWrapper.swift */; };
+		CB23AA911EB55A7800B4D7B4 /* UIButton+Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23AA901EB55A7800B4D7B4 /* UIButton+Bindings.swift */; };
+		CB23AA931EB55B7800B4D7B4 /* UIButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23AA921EB55B7800B4D7B4 /* UIButtonTests.swift */; };
+		CB9980C91EBE4B7300D37184 /* ControlTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9980C81EBE4B7300D37184 /* ControlTarget.swift */; };
 		CBD036B11EAFF7E7003A5943 /* Tigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD036A71EAFF7E7003A5943 /* Tigo.framework */; };
 		CBD036B81EAFF7E7003A5943 /* Tigo.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD036AA1EAFF7E7003A5943 /* Tigo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBD036C41EAFF938003A5943 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036C31EAFF938003A5943 /* Signal.swift */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		CB04367F1EB0572A0040EAD4 /* CombiningWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombiningWrapper.swift; sourceTree = "<group>"; };
+		CB23AA901EB55A7800B4D7B4 /* UIButton+Bindings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Bindings.swift"; sourceTree = "<group>"; };
+		CB23AA921EB55B7800B4D7B4 /* UIButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonTests.swift; sourceTree = "<group>"; };
+		CB9980C81EBE4B7300D37184 /* ControlTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlTarget.swift; sourceTree = "<group>"; };
 		CBD036A71EAFF7E7003A5943 /* Tigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD036AA1EAFF7E7003A5943 /* Tigo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tigo.h; sourceTree = "<group>"; };
 		CBD036AB1EAFF7E7003A5943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				CBD036D71EAFFA5E003A5943 /* UILabel+Bindings.swift */,
+				CB23AA901EB55A7800B4D7B4 /* UIButton+Bindings.swift */,
+				CB9980C81EBE4B7300D37184 /* ControlTarget.swift */,
 			);
 			name = "CocoaTouch Bindings";
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				CBD036E61EB00E90003A5943 /* UILabelTests.swift */,
+				CB23AA921EB55B7800B4D7B4 /* UIButtonTests.swift */,
 			);
 			name = "CocoaTouch Bindings";
 			sourceTree = "<group>";
@@ -291,11 +300,13 @@
 			files = (
 				CBD036D51EAFFA34003A5943 /* Observer.swift in Sources */,
 				CBD036D81EAFFA5E003A5943 /* UILabel+Bindings.swift in Sources */,
+				CB9980C91EBE4B7300D37184 /* ControlTarget.swift in Sources */,
 				CBD036D31EAFFA23003A5943 /* Operators.swift in Sources */,
 				CBD036CB1EAFF9B6003A5943 /* MappingWrapper.swift in Sources */,
 				CB0436801EB0572A0040EAD4 /* CombiningWrapper.swift in Sources */,
 				CBD036C81EAFF988003A5943 /* Wrapper.swift in Sources */,
 				CBD036CD1EAFF9BE003A5943 /* ConditionalWrapper.swift in Sources */,
+				CB23AA911EB55A7800B4D7B4 /* UIButton+Bindings.swift in Sources */,
 				CBD036C61EAFF972003A5943 /* Observable.swift in Sources */,
 				CBD036C41EAFF938003A5943 /* Signal.swift in Sources */,
 			);
@@ -306,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD036DD1EAFFAE6003A5943 /* SignalTests.swift in Sources */,
+				CB23AA931EB55B7800B4D7B4 /* UIButtonTests.swift in Sources */,
 				CBD036E01EB009FB003A5943 /* ObserverTests.swift in Sources */,
 				CBD036E71EB00E90003A5943 /* UILabelTests.swift in Sources */,
 				CBD036E21EB00B63003A5943 /* OperatorsTests.swift in Sources */,
