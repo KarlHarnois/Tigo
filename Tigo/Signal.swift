@@ -4,6 +4,12 @@ public final class Signal<T>: Observable {
   internal var observers: [Observer<T>] = []
   internal var children: [AnyWrapper] = []
 
+  // MARK: - Inspector
+
+  public var childrenCount: Int {
+    return children.count
+  }
+
   // MARK: - Value
 
   var last: T? {
@@ -62,6 +68,16 @@ public final class Signal<T>: Observable {
     subscribe(wrapper)
 
     return new
+  }
+
+  public func debug(_ label: String) -> Signal<T> {
+    print("Added debug observer with label: \(label)")
+
+    observers.append(Observer { value in
+      print("\(label): new value \(value)")
+    })
+
+    return self
   }
 
   // MARK: - Bindings
