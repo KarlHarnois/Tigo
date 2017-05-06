@@ -11,6 +11,7 @@
 		CB23AA911EB55A7800B4D7B4 /* UIButton+Bindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23AA901EB55A7800B4D7B4 /* UIButton+Bindings.swift */; };
 		CB23AA931EB55B7800B4D7B4 /* UIButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23AA921EB55B7800B4D7B4 /* UIButtonTests.swift */; };
 		CB9980C91EBE4B7300D37184 /* ControlTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9980C81EBE4B7300D37184 /* ControlTarget.swift */; };
+		CB9980CB1EBE4DF800D37184 /* DisposableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9980CA1EBE4DF800D37184 /* DisposableManager.swift */; };
 		CBD036B11EAFF7E7003A5943 /* Tigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD036A71EAFF7E7003A5943 /* Tigo.framework */; };
 		CBD036B81EAFF7E7003A5943 /* Tigo.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD036AA1EAFF7E7003A5943 /* Tigo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBD036C41EAFF938003A5943 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD036C31EAFF938003A5943 /* Signal.swift */; };
@@ -42,6 +43,7 @@
 		CB23AA901EB55A7800B4D7B4 /* UIButton+Bindings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Bindings.swift"; sourceTree = "<group>"; };
 		CB23AA921EB55B7800B4D7B4 /* UIButtonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonTests.swift; sourceTree = "<group>"; };
 		CB9980C81EBE4B7300D37184 /* ControlTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlTarget.swift; sourceTree = "<group>"; };
+		CB9980CA1EBE4DF800D37184 /* DisposableManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposableManager.swift; sourceTree = "<group>"; };
 		CBD036A71EAFF7E7003A5943 /* Tigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD036AA1EAFF7E7003A5943 /* Tigo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tigo.h; sourceTree = "<group>"; };
 		CBD036AB1EAFF7E7003A5943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				CBD036D21EAFFA23003A5943 /* Operators.swift */,
 				CBD036D41EAFFA34003A5943 /* Observer.swift */,
+				CB9980CA1EBE4DF800D37184 /* DisposableManager.swift */,
 				CBD036DB1EAFFA95003A5943 /* Observables */,
 				CBD036D61EAFFA48003A5943 /* CocoaTouch Bindings */,
 				CBD036C91EAFF98D003A5943 /* Wrappers */,
@@ -304,6 +307,7 @@
 				CBD036D31EAFFA23003A5943 /* Operators.swift in Sources */,
 				CBD036CB1EAFF9B6003A5943 /* MappingWrapper.swift in Sources */,
 				CB0436801EB0572A0040EAD4 /* CombiningWrapper.swift in Sources */,
+				CB9980CB1EBE4DF800D37184 /* DisposableManager.swift in Sources */,
 				CBD036C81EAFF988003A5943 /* Wrapper.swift in Sources */,
 				CBD036CD1EAFF9BE003A5943 /* ConditionalWrapper.swift in Sources */,
 				CB23AA911EB55A7800B4D7B4 /* UIButton+Bindings.swift in Sources */,

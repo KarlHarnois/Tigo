@@ -1,11 +1,16 @@
 import UIKit
 
-public final class ControlTarget: NSObject {
+public final class ControlTarget: NSObject, Disposable {
   public let signal = Signal<Void>()
   public let events: UIControlEvents
 
   private weak var control: UIControl?
-  private var retainSelf: ControlTarget?
+
+  // MARK: - Disposable
+
+  var isReadyForDisposal: Bool {
+    return control == nil
+  }
 
   // MARK: - Init
 
@@ -15,7 +20,8 @@ public final class ControlTarget: NSObject {
 
     super.init()
 
-    retainSelf = self
+    DisposableManager.shared.retain(self)
+
     bindTarget()
   }
 
