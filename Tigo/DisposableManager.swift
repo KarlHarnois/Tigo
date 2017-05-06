@@ -15,7 +15,7 @@ final class DisposableManager: NSObject {
 
     timer = Timer.scheduledTimer(timeInterval: 0.4,
                                  target: self,
-                                 selector: #selector(DisposableManager.performCleaning),
+                                 selector: #selector(DisposableManager.performReleases),
                                  userInfo: nil,
                                  repeats: true)
   }
@@ -24,7 +24,7 @@ final class DisposableManager: NSObject {
     disposables.append(disposable)
   }
 
-  func performCleaning() {
+  func performReleases() {
     DispatchQueue.global(qos: .background).async {
       self.disposables = self.disposables.filter { !$0.isReadyForDisposal }
     }
